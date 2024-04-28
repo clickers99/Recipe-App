@@ -20,12 +20,20 @@ async function getRecipe() {
 async function buildApp() {
   const recipe = await getRecipe();
 
+  const recipeImage = document.createElement("img");
   const title = document.createElement("h2");
   const ingredientsHeader = document.createElement("h2");
   const ingredients = document.createElement("p");
   const stepsHeader = document.createElement("h2");
   const steps = document.createElement("p");
 
+  recipeImage.src = recipe.cover;
+  recipeImage.classList.add(
+    "object-cover",
+    "rounded-lg",
+    "w-full",
+    "h-[200px]"
+  );
   title.textContent = recipe.name;
   ingredients.textContent = recipe.ingredients;
   steps.textContent = recipe.steps;
@@ -39,6 +47,7 @@ async function buildApp() {
   stepsHeader.classList.add("text-2xl", "font-bold");
 
   recipeContainer.append(
+    recipeImage,
     title,
     ingredientsHeader,
     ingredients,
