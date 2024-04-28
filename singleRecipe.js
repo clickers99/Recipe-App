@@ -1,24 +1,23 @@
 const recipeContainer = document.getElementById("recipe");
-const editBtn = document.getElementById("editBtn");
-const homeBtn = document.getElementById("homeBtn");
-
 const query = location.search;
 const params = new URLSearchParams(query);
 const id = params.get("id");
+const editBtn = document.getElementById("editBtn");
+const homeBtn = document.getElementById("homeBtn");
 
 const API_ENDPOINT = `https://v1.appbackend.io/v1/rows/bZkxv7cdtB5B/${id}`;
 
 editBtn.href = `/editRecipe.html?id=${id}`;
-homeBtn.href = "/";
+homeBtn.href = "/index.html";
 
-async function getRecipe() {
+async function getRecipes() {
   const res = await fetch(API_ENDPOINT);
   const data = await res.json();
   return data;
 }
 
 async function buildApp() {
-  const recipe = await getRecipe();
+  const recipe = await getRecipes();
 
   const recipeImage = document.createElement("img");
   const title = document.createElement("h2");

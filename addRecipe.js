@@ -2,6 +2,8 @@ const API_ENDPOINT = `https://v1.appbackend.io/v1/rows/bZkxv7cdtB5B/`;
 const recipeContainer = document.getElementById("recipe");
 const form = document.getElementById("form");
 
+homeBtn.href = "/index.html";
+
 form.addEventListener("submit", async event => {
   event.preventDefault();
 
@@ -14,7 +16,7 @@ form.addEventListener("submit", async event => {
   const description = formdata.get("description");
 
   await createData(cover, name, ingredients, category, steps, description);
-  location.replace(`/`);
+  location.replace(`/index.html`);
 });
 
 async function createData(

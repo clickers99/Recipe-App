@@ -1,6 +1,9 @@
+const recipeContainer = document.getElementById("recipe");
 const query = location.search;
 const params = new URLSearchParams(query);
 const id = params.get("id");
+
+homeBtn.href = "/index.html";
 
 const API_ENDPOINT = `https://v1.appbackend.io/v1/rows/bZkxv7cdtB5B/${id}`;
 
