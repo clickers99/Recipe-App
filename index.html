@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="max-w-4xl m-auto my-4 space-y-6">
+      <section>
+        <h1 class="text-2xl font-medium tracking-tight text-center">
+          Realsiba Food
+        </h1>
+        <p class="text-xl text-center">
+          Tempat terbaik untuk mencari resep makanan!
+        </p>
+      </section>
+      <div class="flex space-x-4">
+        <a
+          href="/addRecipe.html"
+          id="addRecipe"
+          class="bg-blue-500 text-white font-bold px-3 py-2 rounded-lg"
+          >Tambahkan Resep</a
+        >
+        <input
+          placeholder="Cari Resep"
+          id="searchRecipe"
+          class="p-2 text-sm rounded-full w-30 bg-slate-200"
+        />
+      </div>
+      <section
+        class="grid grid-cols 1 md:grid-cols-3 gap-4"
+        id="recipes"
+      ></section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

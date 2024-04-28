@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="max-w-2xl m-auto my-8 space-y-6">
+      <div class="m-auto my-8 space-y-6 ">
+        <a
+          href="/"
+          class="bg-blue-500 text-white font-bold px-3 py-2 rounded-lg"
+          >Kembali ke Halaman Utama</a
+        >
+      <form id="form" class="space-y-4">
+        <input
+          id="cover"
+          placeholder="Cover Image URL"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <input
+          id="name"
+          placeholder="Recipe Name"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <textarea
+          id="ingredients"
+          placeholder="Ingredients"
+          rows="8"
+          class="block w-full border p-2 rounded-lg"
+        ></textarea>
+        <input
+          id="category"
+          placeholder="Category"
+          class="block w-full border p-2 rounded-lg"
+        />
+        <textarea
+          id="steps"
+          placeholder="Steps"
+          rows="8"
+          class="block w-full border p-2 rounded-lg"
+        ></textarea>
+        <textarea
+          id="description"
+          placeholder="Description"
+          rows="4"
+          class="block w-full border p-2 rounded-lg"
+        ></textarea>
+        <button class="bg-blue-500 text-white p-2 rounded-lg">Update</button>
+      </form>
+    </main>
+
+    <script src="addRecipe.js"></script>
+  </body>
+</html>
