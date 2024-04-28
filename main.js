@@ -1,6 +1,6 @@
 const recipesContainer = document.getElementById("recipes");
 const API_ENDPOINT = "https://v1.appbackend.io/v1/rows/bZkxv7cdtB5B/";
-const searchInput = document.getElementById("searchInput");
+/* const searchInput = document.getElementById("searchInput"); */
 const addRecipe = document.getElementById("addRecipe");
 
 addRecipe.addEventListener("click", () => {
