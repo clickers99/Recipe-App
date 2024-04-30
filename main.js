@@ -35,7 +35,7 @@ async function buildApp() {
     const recipeName = document.createElement("h2");
     const recipeCategory = document.createElement("p");
     const recipeDesc = document.createElement("p");
-    const recipeBtn = document.createElement("a");
+    const recipeLook = document.createElement("a");
     const recipeDeleteBtn = document.createElement("button");
 
     recipeImage.src = recipe.cover;
@@ -50,7 +50,7 @@ async function buildApp() {
     recipeCategory.textContent = recipe.category;
     recipeCategory.classList.add(
       "text-center",
-      "text-xl",
+      "text-sm",
       "font-semibold",
       "rounded-lg",
       "p-2",
@@ -61,16 +61,18 @@ async function buildApp() {
     );
     recipeDesc.textContent = recipe.description;
     recipeDesc.classList.add("text-center");
-    recipeBtn.textContent = "Lihat Resep";
-    recipeBtn.href = `/recipe.html?id=${recipe._id}`;
-    recipeBtn.classList.add(
+    recipeLook.textContent = "Lihat Resep";
+    recipeLook.href = `/recipe.html?id=${recipe._id}`;
+    recipeLook.classList.add(
       "bg-blue-500",
       "text-white",
       "p-2",
       "rounded-lg",
       "block",
       "w-full",
-      "text-center"
+      "text-center",
+      "hover:bg-blue-600",
+      "transition-all"
     );
 
     recipeDeleteBtn.textContent = "Hapus Resep";
@@ -81,7 +83,9 @@ async function buildApp() {
       "rounded-lg",
       "block",
       "w-full",
-      "text-center"
+      "text-center",
+      "hover:bg-red-600",
+      "transition-all"
     );
     recipeContainer.classList.add(
       "bg-slate-100",
@@ -97,7 +101,7 @@ async function buildApp() {
       recipeName,
       recipeCategory,
       recipeDesc,
-      recipeBtn,
+      recipeLook,
       recipeDeleteBtn
     );
     recipesContainer.append(recipeContainer);
