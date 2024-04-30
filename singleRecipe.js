@@ -21,6 +21,7 @@ async function buildApp() {
 
   const recipeImage = document.createElement("img");
   const title = document.createElement("h2");
+  const category = document.createElement("p");
   const ingredientsHeader = document.createElement("h2");
   const ingredients = document.createElement("p");
   const stepsHeader = document.createElement("h2");
@@ -34,12 +35,22 @@ async function buildApp() {
     "h-[200px]"
   );
   title.textContent = recipe.name;
+  category.textContent = recipe.category;
   ingredients.textContent = recipe.ingredients;
   steps.textContent = recipe.steps;
   ingredientsHeader.textContent = "Ingredients";
   stepsHeader.textContent = "Cara Memasak";
 
   title.classList.add("text-4xl", "font-bold");
+  category.classList.add(
+    "text-xl",
+    "font-semibold",
+    "rounded-lg",
+    "p-2",
+    "max-w-max",
+    "bg-gray-600",
+    "text-white"
+  );
   ingredients.classList.add("whitespace-pre-line");
   steps.classList.add("whitespace-pre-line");
   ingredientsHeader.classList.add("text-2xl", "font-bold");
@@ -48,6 +59,7 @@ async function buildApp() {
   recipeContainer.append(
     recipeImage,
     title,
+    category,
     ingredientsHeader,
     ingredients,
     stepsHeader,

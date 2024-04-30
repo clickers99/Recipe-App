@@ -33,6 +33,7 @@ async function buildApp() {
     const recipeContainer = document.createElement("div");
     const recipeImage = document.createElement("img");
     const recipeName = document.createElement("h2");
+    const recipeCategory = document.createElement("p");
     const recipeDesc = document.createElement("p");
     const recipeBtn = document.createElement("a");
     const recipeDeleteBtn = document.createElement("button");
@@ -46,6 +47,18 @@ async function buildApp() {
     );
     recipeName.textContent = recipe.name;
     recipeName.classList.add("text-xl", "font-bold", "text-center");
+    recipeCategory.textContent = recipe.category;
+    recipeCategory.classList.add(
+      "text-center",
+      "text-xl",
+      "font-semibold",
+      "rounded-lg",
+      "p-2",
+      "max-w-max",
+      "bg-gray-600",
+      "text-white",
+      "m-auto"
+    );
     recipeDesc.textContent = recipe.description;
     recipeDesc.classList.add("text-center");
     recipeBtn.textContent = "Lihat Resep";
@@ -82,6 +95,7 @@ async function buildApp() {
     recipeContainer.append(
       recipeImage,
       recipeName,
+      recipeCategory,
       recipeDesc,
       recipeBtn,
       recipeDeleteBtn
