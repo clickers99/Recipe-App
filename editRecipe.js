@@ -1,4 +1,3 @@
-const recipeContainer = document.getElementById("recipe");
 const query = location.search;
 const params = new URLSearchParams(query);
 const id = params.get("id");
@@ -18,7 +17,7 @@ const form = document.getElementById("form");
 form.addEventListener("submit", async event => {
   event.preventDefault();
 
-  await fetch("https://v1.appbackend.io/v1/rows/o86Ixoi40TXu", {
+  await fetch("https://v1.appbackend.io/v1/rows/bZkxv7cdtB5B", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
